@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "sistemas.escuelaing.edu.co.config.ApplicationProperties",
+      "sourceType": "sistemas.escuelaing.edu.co.config.ApplicationProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

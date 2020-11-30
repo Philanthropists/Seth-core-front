@@ -1,0 +1,17 @@
+version: '2'
+services:
+  solidaridad-app:
+    image: solidaridad
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_MONGODB_URI=mongodb://solidaridad-mongodb:27017
+      - SPRING_DATA_MONGODB_DATABASE=solidaridad
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  solidaridad-mongodb:
+    extends:
+      file: mongodb.yml
+      service: solidaridad-mongodb
